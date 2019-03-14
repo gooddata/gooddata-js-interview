@@ -2,39 +2,41 @@
 # yarn lockfile v1
 
 
-"@gooddata/gooddata-js@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/gooddata-js/-/gooddata-js-8.2.0.tgz#a03e346a013af845f393aaa7c7dce98e9c2bfe35"
+"@gooddata/gooddata-js@11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/gooddata-js/-/gooddata-js-11.0.0.tgz#cea1ce2a21a17dc6fc2593bf6e8ac335c17f7bb1"
+  integrity sha512-WfplkfCK50OBangU3H2nmKTw5BEZsWDYKdmmEZsQXFYAY8ufHRnAW9rWc9/IDgmIG/z8YBhf2IBxeUT5mxt8AA==
   dependencies:
-    "@gooddata/typings" "2.3.1"
+    "@gooddata/typings" "2.6.0"
     es6-promise "3.0.2"
     fetch-cookie "0.7.0"
     invariant "2.2.2"
     isomorphic-fetch "2.2.1"
     json-stable-stringify "1.0.1"
-    lodash "4.17.4"
+    lodash "4.17.11"
     md5 "2.2.1"
     node-fetch "1.7.3"
     qs "6.5.1"
     rxjs "^5.5.6"
 
-"@gooddata/goodstrap@57.0.0":
-  version "57.0.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-57.0.0.tgz#51ded1d7f9fcc974e290cbd00f3d0655cd0df9bf"
+"@gooddata/goodstrap@59.4.0":
+  version "59.4.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-59.4.0.tgz#947df8130124dcdf47cb8baa417e994cc4fcb76b"
+  integrity sha512-C5dtTrGh0GNojxXmlGPHpChH8tZj2ctAsaaY+fJN2V2k4tC9gm+rt59VhxsY+hOx+IlMre3j9ZIsRC1ZwfDrXQ==
   dependencies:
-    "@gooddata/js-utils" "^2.0.0"
+    "@gooddata/js-utils" "3.3.0"
     classnames "2.2.5"
     custom-event "1.0.1"
     fixed-data-table-2 "0.7.17"
     foundation-sites "5.5.3"
     immutable "3.8.1"
     invariant "2.2.2"
-    jquery "2.1.4"
     kefir "3.7.1"
-    lodash "4.17.4"
-    moment "2.18.1"
-    moment-timezone "0.5.11"
+    lodash "4.17.11"
+    moment "2.23.0"
+    moment-timezone "0.5.23"
     prop-types "15.6.0"
+    querystringify "2.1.0"
     react-day-picker "7.0.7"
     react-dnd "5.0.0"
     react-document-title "2.0.3"
@@ -45,27 +47,31 @@
     react-textarea-autosize "7.0.4"
     react-transition-group "1.2.1"
     rxjs "^5.5.6"
+    tinycolor2 "1.4.1"
 
-"@gooddata/js-utils@^2.0.0", "@gooddata/js-utils@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-2.0.1.tgz#46290cba9cb1e5f1c5e97e6860b5b1ef943ee779"
+"@gooddata/js-utils@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-3.3.0.tgz#5e6f227be611be5a6d93d1fa8bb5eec7ef357585"
+  integrity sha512-G2GDGZcWj2RbXr197OAc3+XWVf5RLCldzUGxCCaII/osOzZzyelbxJMMnU6qLGtBYJLrVqebnoCn8Pz/rQ48nw==
   dependencies:
     js-cookie "^2.1.4"
-    lodash "^4.17.4"
+    lodash "4.17.11"
+    lodash-es "4.17.11"
 
 "@gooddata/numberjs@^3.1.2":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.1.2.tgz#82dd26486edeb21de37cfe538915f93cd403e801"
 
-"@gooddata/react-components@6.0.0-alpha11":
-  version "6.0.0-alpha11"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.0.0-alpha11.tgz#9c03e8ea1a2211751af5fec5dc165624d86e065d"
+"@gooddata/react-components@6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-6.2.0.tgz#fcff8550625edf0ca9df35b10758a2029782213b"
+  integrity sha512-anZ1/1STfW4WJxrcyel4OCOdvOeK2FN1rj5FwMU3zwegYAc0ZDeGQIqdz8zIhR3jfwYZ1u6lsUWUrmyBGd3uCw==
   dependencies:
-    "@gooddata/gooddata-js" "8.2.0"
-    "@gooddata/goodstrap" "57.0.0"
-    "@gooddata/js-utils" "^2.0.1"
+    "@gooddata/gooddata-js" "11.0.0"
+    "@gooddata/goodstrap" "59.4.0"
+    "@gooddata/js-utils" "3.3.0"
     "@gooddata/numberjs" "^3.1.2"
-    "@gooddata/typings" "2.3.1"
+    "@gooddata/typings" "2.6.0"
     "@types/highcharts" "4.2.56"
     ag-grid "^18.0.1"
     ag-grid-react "^18.0.0"
@@ -76,7 +82,7 @@
     highcharts-pattern-fill "3.0.3"
     http-status-codes "^1.3.0"
     invariant "^2.2.2"
-    lodash "^4.17.4"
+    lodash "4.17.11"
     nodelist-foreach-polyfill "^1.2.0"
     prop-types "^15.6.0"
     react-dom-factories "^1.0.2"
@@ -84,11 +90,12 @@
     react-measure "^1.4.7"
     rxjs "^5.5.6"
 
-"@gooddata/typings@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/typings/-/typings-2.3.1.tgz#b8d1e7819b3ec3dab111dcefbf26e692bdabe41d"
+"@gooddata/typings@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/typings/-/typings-2.6.0.tgz#9246b79920d5c30294e0808a63995cef62738eaa"
+  integrity sha512-LLIh6KBUYsNpaOrOjmF9GwaM3YQX9j4DBbf9WH0CeqN1C0oe8ELEpoa/EFVftGgTSGi445MuSl7VSmTfzarjZA==
   dependencies:
-    lodash "4.17.4"
+    lodash "4.17.11"
 
 "@types/geojson@*":
   version "7946.0.4"
@@ -4213,10 +4220,6 @@ jest@20.0.4:
   dependencies:
     jest-cli "^20.0.4"
 
-jquery@2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
-
 js-base64@^2.1.9:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.3.2.tgz#a79a923666372b580f8e27f51845c6f7e8fbfbaf"
@@ -4465,6 +4468,11 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
+lodash-es@4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
+  integrity sha512-DHb1ub+rMjjrxqlB3H56/6MXtm1lSksDp2rA2cNWjG8mlDUYFhUj3Di2Zn5IwSU87xLv8tNIQ7sSwE/YOX/D/Q==
+
 lodash._reinterpolate@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -4506,7 +4514,12 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@4.17.4, "lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.3.0:
+lodash@4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+
+"lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -4782,19 +4795,22 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-moment-timezone@0.5.11:
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.11.tgz#9b76c03d8ef514c7e4249a7bbce649eed39ef29f"
+moment-timezone@0.5.23:
+  version "0.5.23"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.23.tgz#7cbb00db2c14c71b19303cb47b0fb0a6d8651463"
+  integrity sha512-WHFH85DkCfiNMDX5D3X7hpNH3/PUhjTGcD0U1SgfBGZxJ3qUmJh5FdvaFjcClxOvB3rzdfj4oRffbI38jEnC1w==
   dependencies:
-    moment ">= 2.6.0"
+    moment ">= 2.9.0"
 
-moment@2.18.1:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
+moment@2.23.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
+  integrity sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
 
-"moment@>= 2.6.0":
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+"moment@>= 2.9.0":
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 ms@2.0.0:
   version "2.0.0"
@@ -5799,6 +5815,11 @@ querystring@0.2.0:
 querystringify@0.0.x:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-0.0.4.tgz#0cf7f84f9463ff0ae51c4c4b142d95be37724d9c"
+
+querystringify@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.0.tgz#7ded8dfbf7879dcc60d0a644ac6754b283ad17ef"
+  integrity sha512-sluvZZ1YiTLD5jsqZcDmFyV2EwToyXZBfpoVOmktMmW+VEnhgakFHnasVph65fOjGPTWN0Nw3+XQaSeMayr0kg==
 
 querystringify@~1.0.0:
   version "1.0.0"
@@ -7037,6 +7058,11 @@ timers-browserify@^2.0.4:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.4.tgz#96ca53f4b794a5e7c0e1bd7cc88a372298fa01e6"
   dependencies:
     setimmediate "^1.0.4"
+
+tinycolor2@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
+  integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
 
 tmp@^0.0.33:
   version "0.0.33"
