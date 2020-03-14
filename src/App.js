@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import '@gooddata/react-components/styles/css/main.css';
 
 import { ColumnChart } from '@gooddata/react-components';
+import Dropdown from './components/dropdown/Dropdown';
+import { monthsNames, getISODateString } from './utils/date';
 
 const grossProfitMeasure = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/6877';
 const dateAttributeInMonths = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2142';
@@ -11,14 +13,25 @@ const dateAttribute = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2180';
 
 class App extends Component {
 
-    getMonthFilter() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedMonth: 0,
+            selectedYear: 2016
+        };
+    }
+
+    getMonthFilter(year, month) {
+        const from = new Date(year, month, 2);
+        const to = new Date(year, month + 1, 1);
+
         return {
             absoluteDateFilter: {
                 dataSet: {
                     uri: dateAttribute
                 },
-                from: '2016-01-01',
-                to: '2016-01-31'
+                from: getISODateString(from.toISOString()),
+                to: getISODateString(to.toISOString())
             }
 
         }
@@ -54,34 +67,35 @@ class App extends Component {
         }
     }
 
-    renderDropdown() {
-        return (
-            <select defaultValue="1">
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
-        )
+    onMonthChange(e) {
+        if (e.target && e.target.value) {
+            this.setState({ selectedMonth: parseInt(e.target.value) });
+        }
+    }
+
+    onYearChange(e) {
+        if (e.target && e.target.value) {
+            this.setState({ selectedYear: e.target.value });
+        }
+    }
+
+    renderMonthDropdown() {
+        return <Dropdown items={monthsNames.map((item, index) => ({ value: index.toString(), text: item}))} defaultValue="0" onChange={e => this.onMonthChange(e)} />;
+    }
+
+    renderYearDropdown() {
+        return <Dropdown items={['2015', '2016', '2017', '2018'].map(item => ({ value: item, text: item }))} defaultValue="2016" onChange={e => this.onYearChange(e)} />;
     }
 
     render() {
         const projectId = 'xms7ga4tf3g3nzucd8380o2bev8oeknp';
-        const filters = [this.getMonthFilter()];
+        const filters = [this.getMonthFilter(this.state.selectedYear, this.state.selectedMonth)];
         const measures = this.getMeasures();
         const viewBy = this.getViewBy();
 
         return (
             <div className="App">
-                <h1>$ Gross Profit in month {this.renderDropdown()} 2016</h1>
+                <h1>$ Gross Profit in month {this.renderMonthDropdown()} {this.renderYearDropdown()}</h1>
                 <div>
                     <ColumnChart
                         measures={measures}
