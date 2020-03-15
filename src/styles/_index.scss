@@ -1,0 +1,21 @@
+/**
+* On this sass fille I will add like global styles e.g body, html, buttons...
+* Styles for specific pages, components... we can import them
+*/
+
+@import "./pages/grossProfit";
+
+@import "./components/header";
+@import "./components/filterSelectField";
+
+body {
+  font-family: sans-serif;
+}
+
+.column__chart {
+  height: 400px;
+}
+
+.profit__element {
+  margin-top: 3.56rem;
+}
