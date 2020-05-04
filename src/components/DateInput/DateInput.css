@@ -1,0 +1,10 @@
+.DateInput {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.DateInput__Label {
+    font-size: 16px;
+    padding-right: 10px;
+}
