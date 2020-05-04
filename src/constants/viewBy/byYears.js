@@ -1,10 +1,10 @@
 import { Uri } from '../../utils/Uri';
 
-export const BY_MONTHS = {
+export const BY_YEARS = {
     visualizationAttribute:
     {
         displayForm: {
-            uri: Uri.getDateAttributeInMonths()
+            uri: Uri.getDateAttributeInYears()
         },
         localIdentifier: 'a1'
     }

@@ -14,15 +14,24 @@ const monthDays = {
     "12": 31,
 }
 
-function getFromTo(date) {
+function getMonth(date) {
     const endDay = monthDays[date.month];
 
     return {
         from: `${date.year}-${date.month}-01`,
         to: `${date.year}-${date.month}-${endDay}`
+
     }
 }
+function getYear(date) {
+    const endDay = monthDays[12];
 
+    return {
+        from: `${date.year}-01-01`,
+        to: `${date.year}-12-${endDay}`
+    }
+}
 export const DateFilter = {
-    getFromTo: getFromTo
+    getMonth: getMonth,
+    getYear: getYear
 }

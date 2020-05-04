@@ -2,7 +2,7 @@ import React from "react";
 import './Select.css';
 
 export const Select = ( props ) => {
-    const { options, name, value, defaultValue, disabled, onChangeRaw, onChange } = props;
+    const { options, name, value, disabled, onChangeRaw, onChange } = props;
 
     const handleChange = (event) => {
         const value = event.target.value;

@@ -1,5 +1,4 @@
-import { CONFIG } from '../../config';
-const grossProfitMeasure = `/gdc/md/${CONFIG.projectId}/obj/6877`;
+import { Uri } from '../../utils/Uri';
 
 export const GROSS_PROFIT_MEASURE = [
     {
@@ -8,7 +7,7 @@ export const GROSS_PROFIT_MEASURE = [
             definition: {
                 measureDefinition: {
                     item: {
-                        uri: grossProfitMeasure
+                        uri: Uri.getProfitMeasure()
                     }
                 }
             },

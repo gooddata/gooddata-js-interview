@@ -1,0 +1,9 @@
+.Chart {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.Chart__Title {
+    padding-left: 75px;
+}
