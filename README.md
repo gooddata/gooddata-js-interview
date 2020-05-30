@@ -27,6 +27,9 @@ To successfully complete this tutorial, you are required to:
 
 ![Screenshot after initialization](https://github.com/gooddata/gooddata-js-interview/blob/master/public/screen.png "Initialization Screenshot")
 
+### Run tests
+Run `yarn test` from project root.
+
 ### Task
 
 __Make the dropdown work. That is, the dropdown `onChange` should reload the upper chart appropriately.__
@@ -52,6 +55,10 @@ We are looking for re-usable code. You are strongly encouraged to "over-engineer
 
 ###### Anything else?
 * Contact your recruiter for further information.
+
+###### self signed certificate not trusted in chrome for localhost
+* change chrome settings, run this in chrome:
+``chrome://flags/#allow-insecure-localhost``
 
 ---
 
