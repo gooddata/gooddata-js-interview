@@ -1,30 +1,25 @@
 // Copyright (C) 2007-2019, GoodData(R) Corporation. All rights reserved.
 
-import React, { Component } from "react";
-import "@gooddata/react-components/styles/css/main.css";
+import React, { Component } from 'react';
+import '@gooddata/react-components/styles/css/main.css';
 
-import { ColumnChart, Model } from "@gooddata/react-components";
+import { ColumnChart, Model } from '@gooddata/react-components';
 
-const grossProfitMeasure = "/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/6877";
-const dateAttributeInMonths =
-  "/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2142";
-const dateAttribute = "/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2180";
+const grossProfitMeasure = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/6877';
+const dateAttributeInMonths = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2142';
+const dateAttribute = '/gdc/md/xms7ga4tf3g3nzucd8380o2bev8oeknp/obj/2180';
 
 class App extends Component {
   getMonthFilter() {
-    return Model.absoluteDateFilter(dateAttribute, "2016-01-01", "2016-01-31");
+    return Model.absoluteDateFilter(dateAttribute, '2016-01-01', '2016-01-31');
   }
 
   getMeasures() {
-    return [
-      Model.measure(grossProfitMeasure)
-        .localIdentifier("m1")
-        .alias("$ Gross Profit"),
-    ];
+    return [Model.measure(grossProfitMeasure).localIdentifier('m1').alias('$ Gross Profit')];
   }
 
   getViewBy() {
-    return Model.attribute(dateAttributeInMonths).localIdentifier("a1");
+    return Model.attribute(dateAttributeInMonths).localIdentifier('a1');
   }
 
   renderDropdown() {
@@ -47,7 +42,7 @@ class App extends Component {
   }
 
   render() {
-    const projectId = "xms7ga4tf3g3nzucd8380o2bev8oeknp";
+    const projectId = 'xms7ga4tf3g3nzucd8380o2bev8oeknp';
     const filters = [this.getMonthFilter()];
     const measures = this.getMeasures();
     const viewBy = this.getViewBy();
@@ -56,19 +51,11 @@ class App extends Component {
       <div className="App">
         <h1>$ Gross Profit in month {this.renderDropdown()} 2016</h1>
         <div>
-          <ColumnChart
-            measures={measures}
-            filters={filters}
-            projectId={projectId}
-          />
+          <ColumnChart measures={measures} filters={filters} projectId={projectId} />
         </div>
         <h1>$ Gross Profit - All months</h1>
         <div>
-          <ColumnChart
-            measures={measures}
-            viewBy={viewBy}
-            projectId={projectId}
-          />
+          <ColumnChart measures={measures} viewBy={viewBy} projectId={projectId} />
         </div>
       </div>
     );
