@@ -36,6 +36,9 @@
     "react/prop-types": "off",
     "no-array-index-key.md": "off",
     "react/jsx-one-expression-per-line": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "func-names": "off",
+    "react/jsx-runtime": "off"
   }
 }

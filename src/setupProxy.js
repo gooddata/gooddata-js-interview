@@ -13,7 +13,7 @@ module.exports = function (app) {
         host: 'developer.na.gooddata.com',
         origin: null,
       },
-      onProxyReq(proxyReq, req, res) {
+      onProxyReq(proxyReq) {
         proxyReq.setHeader('accept-encoding', 'identity');
       },
     }),
