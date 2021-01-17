@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MONTHS } from '../utils/constants';
+import { MONTHS } from '../../../constants';
 
 export interface MonthSelectProps {
   // eslint-disable-next-line no-unused-vars

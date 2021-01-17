@@ -1,0 +1,22 @@
+@import './../../../themes/vars.scss';
+
+.contentInner {
+  margin-bottom: 24px;
+  background: #fff;
+  padding: 24px;
+  box-shadow: $shadow;
+  min-height: 'calc(100vh - 230px)';
+  // position: relative;
+}
+
+.loadingStyle {
+  height: 'calc(100vh - 184px)';
+  overflow: 'hidden';
+}
+
+@media (max-width: 767px) {
+  .contentInner {
+    padding: 12px;
+    min-height: 'calc(100vh - 160px)';
+  }
+}

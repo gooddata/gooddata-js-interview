@@ -3,6 +3,8 @@ import React from 'react';
 import { ColumnChart } from '@gooddata/react-components';
 import { VisualizationObject } from '@gooddata/typings';
 import MonthSelect from './MonthSelect';
+import { Page } from '../../../components/common';
+import styles from './GrossProfitMonth.module.scss';
 
 export interface GrossProfitMonthViewProps {
   measures: VisualizationObject.BucketItem[];
@@ -19,12 +21,14 @@ const GrossProfitMonthView: React.FC<GrossProfitMonthViewProps> = ({
   dispatchMonthChange,
 }) => (
   <>
-    <h1>
-      $ Gross Profit in month <MonthSelect dispatchMonthChange={dispatchMonthChange} /> 2016
-    </h1>
-    <div>
-      <ColumnChart measures={measures} filters={[filter]} projectId={projectId} />
-    </div>
+    <Page inner>
+      <h1>
+        $ Gross Profit in month <MonthSelect dispatchMonthChange={dispatchMonthChange} /> 2016
+      </h1>
+      <div className={styles.columnChart}>
+        <ColumnChart measures={measures} filters={[filter]} projectId={projectId} />
+      </div>
+    </Page>
   </>
 );
 

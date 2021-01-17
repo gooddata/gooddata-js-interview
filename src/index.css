@@ -52,11 +52,11 @@ body {
   background-color: #f0f3f5;
   -webkit-overflow-scrolling: touch;
 }
-
+/* 
 .App > div {
   height: 400px;
 }
 
 .App select {
   font-size: 30px;
-}
+} */

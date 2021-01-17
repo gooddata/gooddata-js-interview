@@ -39,6 +39,7 @@
     "class-methods-use-this": "off",
     "import/no-extraneous-dependencies": "off",
     "func-names": "off",
-    "react/jsx-runtime": "off"
+    "react/jsx-runtime": "off",
+    "import/prefer-default-export": "off"
   }
 }
